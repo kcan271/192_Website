@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+  <header>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      
+      <!-- Favicon -->
+      <link rel="icon" href="Images/favicon_io/favicon.ico">
+        
+      <!-- Stylesheet -->
+      <link rel="stylesheet" type="text/css" href="css/style.css">
+        
+      <!-- JavaScript -->
+      <script type="text/javascript" src="JS/java.js"></script>
+  
+      <!-- Name of the Website -->
+      <title>Think Global</title>
+        
+      <!-- Logo -->
+      <img class="Logo" src="Images/Screenshot_3.png" alt="Logo"> 
+        
+      <!-- SearchBar -->
+      <input id="searchbar" onkeyup="search()" type="text" name="search" placeholder="Search for a programme...">
+      
+        
+    </header>
+
+      <body>
+          <!-- Internship -->
+          <button class="accordion">Internships</button>
+          <div class="panel" data-programme="internship">
+              <h1>Internships</h1>
+              <p><img class="intern" src="Images/3.JPG" alt="Internships" width="40%">The Intership program is one programs offered in here at Think Global <br> Think Global has connections with different companies in the world which can easily help you to get an internship to your dream compnay. <br> Think Global can help customise a internship programme for you which will benefit the professional skill you are after <span class="dots">...</span><span class="more" style="display: none;"> Internship Programmes can help you gain experience on your future profession which can help advance your career<br>Think Global can obtain the internship you require in a country of your choice</span></p><button onclick="readMore('internship')" class="myBtn">Read more</button><br>
+          </div>
+
+          <!-- Study -->
+          <button class="accordion">Study</button>
+          <div class="panel" data-programme="studying">
+              <h1>Study Abroad!</h1>
+              <p><img class="study" src="Images/1.jpg" alt="Studying" width="40%"> Think Global has connections to majority of universities across the world. <br> Most univerisities requires their students to take a lomitied amount of courses but some lets you take as much as you could.<br> Think Global enourgaes its students to choose a subject that is not offered to their home country to have a more feel<span class="dots">...</span><span class="more" style="display: none;"> of experience. <br> Most universities have certain prerequistes that you have to take before entering a course but this is not worry if you have not done the course before as it will be available as a course. <br> Studying abroad helps enhance your knowledge with education but also with culture and language. This will help you to broaden you perspective on different people and different cultures.</span></p><button onclick="readMore('studying')" class="myBtn">Read more</button><br>
+          </div>
+
+          <!-- Work -->
+          <button class="accordion">Work Abroad</button>
+          <div class="panel" data-programme="work">
+              <h1>Working Abroad</h1>
+              <p><img class="work" src="Images/2.jpg" alt="Working in NASA" width="40%">A working holiday is a cultural exchange concept which allows you to work abroad on a special, government-issued ‘working holiday visa. <br>You’ll earn a local income to fund your travels and have the freedom to explore the country for longer than the average tourist. <br> It’s the perfect opportunity to travel, live like a local<span class="dots">...</span><span class="more" style="display: none;"> and immerse yourself in a different culture.<br> You’ll learn another language, discover unique traditions, make new friends and create a never-ending bank of incredible moments on this life-changing experience.<br> Embark on a journey of self-discovery and gain international work experience that will look great on your resumé/CV on a working holiday</span></p><button onclick="readMore('work')" class="myBtn">Read more</button><br>
+          </div>
+
+          <!-- Volunteering -->
+          <button class="accordion">Volunteering</button>
+          <div class="panel" data-programme="help">
+              <h1>Volunteer</h1>
+              <p><img class="volunteer" src="Images/4.jpg" alt="Volunteer" width="40%"> Volunteering is one the greatest act of man. Helping others withput expecting anything back.<br> Think Global can help you connect to volunteering groups that travels around the world to help people in need. <br> Volunteering is great way to learn new skills and earn <span class="dots">...</span><span class="more" style="display: none;"> opportunities that can help benefit you in the future. <br> It makes you feel happiness and fulfillness in life. It can help feel healthier mentally and emotionally. Volunteering help you boarden your understanding on the hardships and small happiness of people doesn't have much. <br> Through volunteering, you can meet new people, learn a new language, understand a culture, and many more.</span></p><button onclick="readMore('help')" class="myBtn">Read more</button><br>
+          </div>
+
+          <!-- Gap Year -->
+          <button class="accordion">Gap Year</button>
+          <div class="panel" data-programme="break">
+              <h1>Take a Gap Year!</h1>
+              <p><img class="gap" src="Images/5.jpg" alt="Travel" width="40%"> A gap year can be many things. Its a great way to take a brea, complete your bucket list , and travel. <br> Think Global can help you achieve all of that. Explore what the world has to offer. A gap year can be use in other different ways: take up a full time job, reflect on what do you want to study, and many more.<br> A great way to use your gap year is travel the world. Backpacking through Europe, Learn the unique cultures of Asia,<span class="dots">...</span><span class="more" style="display: none;"> Explore the African Desserts, or feel the Chill of the poles. <br> Travelling allows you to learn different cultures and help you to be more understanding of other. <br>This is Think Global's vision is to have a world where people are in peace with each other and understand our difference. By helping you get to where you want is one step closer for Think Global to achieve it's vision.</span></p><button onclick="readMore('break')" class="myBtn">Read more</button><br>
+          </div>
+      </body>
+    <script>
+        //DropDowns
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+          acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.maxHeight) {
+              panel.style.maxHeight = null;
+            } else {
+              panel.style.maxHeight = panel.scrollHeight + "px";
+            } 
+          });
+        }
+    </script>
+    <footer class="foot">
+        <p>Think Global <br> &copy; Copyright 2020</p>
+    </footer>
+</html>
